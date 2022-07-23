@@ -51,8 +51,8 @@ Other ESP Boards
 ----------------
 
 This controller should work fine on other ESP boards, with the following setup:
-- GPIO 19 - LIN RX
-- GPIO 22 - LIN TX 
+- GPIO 22 - LIN RX
+- GPIO 19 - LIN TX 
 - GPIO 27 - NeoPixel Compatible LED (SK6812/WS2812C/etc)
 
 Parts Required
