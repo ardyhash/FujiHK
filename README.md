@@ -45,7 +45,7 @@ Alternatively, you can use an online QR code generator such as [the-qrcode-gener
 
 Example Circuit
 ---------------
-<img src="https://github.com/unreality/ardyhash/blob/master/example-circuit.png"/>
+<img src="https://github.com/ardyhash/fujiHK/blob/master/example-circuit.png"/>
 
 Other ESP Boards
 ----------------
