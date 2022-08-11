@@ -9,14 +9,17 @@
 #define LED_BRIGHTNESS 1
 #define BTN_PIN 39
 
-#define RX_PIN 22
-#define TX_PIN 19
-#define SECONDARY false
+#define RX_PIN 22 // Original Unreality 19
+#define TX_PIN 19 // Original Unreality 22
+#define SECONDARY true // Moved this here for ease
+#define MSG_SRC 2 // Not used yet, experimenting
+#define MSG_DST 32 // Not used yet, experimenting
 
 #define COLOR_RED       255,0,0
 #define COLOR_GREEN     0,255,0
 #define COLOR_GREEN_DIM 0,1,0
 #define COLOR_BLUE      0,0,255
+
 #define COLOR_MAGENTA   162,0,162
 #define COLOR_YELLOW    162,162,0
 #define COLOR_CYAN      0,168,168
@@ -421,6 +424,8 @@ void FujiTaskLoop(void *pvParameters){
 
   Serial.print("Creating FujiHeatPump object\n");
   hp.connect(&Serial2, SECONDARY, RX_PIN, TX_PIN);
+  hp.debugPrint=true;
+
     
   for(;;){
       if(xSemaphoreTake(pendingMutex, (TickType_t)200) == pdTRUE) {
